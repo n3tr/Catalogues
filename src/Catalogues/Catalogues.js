@@ -39,8 +39,14 @@ class Page {
 class Catalogues {
   
   constructor() {
+    this.title = 'Catalogues'
     this.pages = []
     this.pageSlug = {}
+  }
+
+  config({ title }) {
+    console.log('config', title)
+    this.title = title
   }
 
   page = (title, description) => {
@@ -50,7 +56,6 @@ class Catalogues {
     const existingPage = this.pageSlug[slug]
     if (existingPage) {
       // Support HMR
-      console.log('existingPage', existingPage)
       existingPage._clear()
       return existingPage
     } else {

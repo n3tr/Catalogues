@@ -3,7 +3,6 @@ import catalogues from '../Catalogues'
 import NativeCataloguesRenderer from './NativeCataloguesRenderer'
 
 function getNativeRenderer() {
-  console.log('test')
   return <NativeCataloguesRenderer catalogues={catalogues} />
 }
 

@@ -39,9 +39,6 @@ export default class PageList extends React.Component {
   render() {
     const { pages } = catalogues
     const { navigation } = this.props
-
-    console.log(pages)
-
     return (
       <FlatList
         data={pages.map(page => Object.assign({}, page, { key: page.slug }))}

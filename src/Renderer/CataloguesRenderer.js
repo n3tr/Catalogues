@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import './style.css'
 
 import { HashRouter, Route } from 'react-router-dom'
 import Page from './Page'
@@ -47,12 +48,9 @@ const createRouterContainer = explorer => {
 
     render() {
       const page = this.getPage()
-      console.log(page)
-
       if (!page) {
         return <div>Not found!</div>
       }
-
       return <Page page={this.getPage()} />
     }
   }
@@ -97,7 +95,7 @@ class Header extends React.Component {
       <HeaderContainer>
         <Container>
           <HeaderInner>
-            <PageTitle>Jitta</PageTitle>
+            <PageTitle>{this.props.title}</PageTitle>
           </HeaderInner>
         </Container>
       </HeaderContainer>
@@ -126,13 +124,14 @@ class CataloguesRenderer extends React.Component {
   constructor(props) {
     super(props)
     this.explorer = props.explorer
+    console.log(this.explorer)
     this.routerContainer = createRouterContainer(this.explorer)
   }
   render() {
     return (
       <HashRouter>
         <Root>
-          <Header />
+          <Header title={this.explorer.title}/>
 
           <Container>
             <PageWrapper>

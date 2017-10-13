@@ -31,7 +31,6 @@ export default class Page extends React.Component {
   render() {
     const { params } = this.props.navigation.state
     const { title, items } = params.page
-    console.log(items)
     return (
       <PageView>
         {items.map((item, i) => this.getContent(item, i))}
