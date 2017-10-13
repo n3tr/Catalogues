@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Section from './Section'
-import { CodePreviewer, ElementPreviewer, TextPreviewer } from './ContentPreviewer'
+import { CodePreviewer, ElementPreviewer, TextPreviewer, Section } from './ContentPreviewer'
 
 const PageTitle = styled.h2`
   margin-top: 80px;

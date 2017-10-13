@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import Section from './Section'
 import { ScrollView } from 'react-native'
-import { CodePreviewer, ElementPreviewer, TextPreviewer } from './ContentPreviewer'
+import { CodePreviewer, ElementPreviewer, TextPreviewer, Section } from './ContentPreviewer'
 
 const PageView = styled.ScrollView`
   background: #fff;

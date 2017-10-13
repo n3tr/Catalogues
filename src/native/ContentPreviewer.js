@@ -75,3 +75,26 @@ export const TextPreviewer = ({ text }) => {
     </Text>
   )
 }
+
+
+const SectionBox = styled.View`
+  margin-top: 24px
+`
+
+const SectionTitle = styled.Text`
+  padding: 0px 8px 12px;
+  font-size: 24px;
+  font-weight: normal;
+`
+
+export class Section extends React.Component {
+  render() {
+    const { title, items } = this.props
+
+    return (
+      <SectionBox>
+        <SectionTitle>{ title }</SectionTitle>
+      </SectionBox>
+    )
+  }
+}
